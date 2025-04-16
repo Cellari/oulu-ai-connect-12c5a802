@@ -1,11 +1,10 @@
 
 import { Link, useLocation } from "react-router-dom";
-import { Home, MessageCircle, MapPin, AlertCircle, User } from "lucide-react";
+import { Home, MapPin, AlertCircle, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigationItems = [
   { name: "Home", path: "/", icon: Home },
-  { name: "Chat", path: "/chat", icon: MessageCircle },
   { name: "Explore", path: "/explore", icon: MapPin },
   { name: "Report", path: "/feedback", icon: AlertCircle },
   { name: "Profile", path: "/profile", icon: User },
