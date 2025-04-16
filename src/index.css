@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .oulu-gradient {
-    @apply bg-gradient-to-r from-oulu-primary to-oulu-secondary;
-  }
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
