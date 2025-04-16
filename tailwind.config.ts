@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -28,7 +29,6 @@ export default {
 					dark: '#1A365D',        // Dark blue for text
 					gray: '#6B7280'         // Gray for secondary text
 				},
-			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
