@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
-import { MapPin, MessageCircle, Calendar, AlertCircle, ChevronRight } from "lucide-react";
+import { MapPin, MessageCircle, Calendar, AlertCircle, ChevronRight, Navigation } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const currentDate = new Date();
@@ -9,6 +10,11 @@ const Index = () => {
     month: 'long', 
     day: 'numeric' 
   });
+
+  const openInMaps = (location: string) => {
+    const url = `https://maps.google.com/maps?q=${location}`;
+    window.open(url, '_blank');
+  };
 
   return (
     <div className="p-4">
@@ -72,12 +78,23 @@ const Index = () => {
                 <span className="block text-xs">APR</span>
                 <span className="block text-lg font-bold">15</span>
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="font-medium">Oulu Day Festival</h3>
                 <p className="text-xs text-oulu-gray">Market Square, 12:00 - 18:00</p>
-                <div className="mt-1">
-                  <span className="inline-block bg-oulu-light text-oulu-primary text-xs px-2 py-0.5 rounded-full">Family</span>
-                  <span className="inline-block bg-oulu-light text-oulu-primary text-xs px-2 py-0.5 rounded-full ml-1">Outdoor</span>
+                <div className="flex justify-between items-center mt-1">
+                  <div>
+                    <span className="inline-block bg-oulu-light text-oulu-primary text-xs px-2 py-0.5 rounded-full">Family</span>
+                    <span className="inline-block bg-oulu-light text-oulu-primary text-xs px-2 py-0.5 rounded-full ml-1">Outdoor</span>
+                  </div>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="p-0 h-auto text-oulu-secondary"
+                    onClick={() => openInMaps("65.013826,25.464782")}
+                  >
+                    <Navigation size={14} className="mr-1" />
+                    <span className="text-xs">Map</span>
+                  </Button>
                 </div>
               </div>
             </div>
@@ -88,12 +105,23 @@ const Index = () => {
                 <span className="block text-xs">APR</span>
                 <span className="block text-lg font-bold">17</span>
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="font-medium">Art Exhibition Opening</h3>
                 <p className="text-xs text-oulu-gray">Cultural Center, 17:00 - 20:00</p>
-                <div className="mt-1">
-                  <span className="inline-block bg-oulu-light text-oulu-primary text-xs px-2 py-0.5 rounded-full">Arts</span>
-                  <span className="inline-block bg-oulu-light text-oulu-primary text-xs px-2 py-0.5 rounded-full ml-1">Indoor</span>
+                <div className="flex justify-between items-center mt-1">
+                  <div>
+                    <span className="inline-block bg-oulu-light text-oulu-primary text-xs px-2 py-0.5 rounded-full">Arts</span>
+                    <span className="inline-block bg-oulu-light text-oulu-primary text-xs px-2 py-0.5 rounded-full ml-1">Indoor</span>
+                  </div>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="p-0 h-auto text-oulu-secondary"
+                    onClick={() => openInMaps("65.012052,25.470384")}
+                  >
+                    <Navigation size={14} className="mr-1" />
+                    <span className="text-xs">Map</span>
+                  </Button>
                 </div>
               </div>
             </div>
