@@ -1,13 +1,9 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { 
-  MapPin, 
   Calendar, 
   AlertCircle, 
-  ChevronRight, 
   Navigation,
-  ChevronDown,
   Bot
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,7 +38,7 @@ const HomeChat = () => {
   };
 
   useEffect(() => {
-    // Initialize with welcome message and home content
+    // Initialize with welcome message and today's highlights
     if (messages.length === 0) {
       setMessages([
         {
@@ -52,7 +48,7 @@ const HomeChat = () => {
             <div>
               <h2 className="font-semibold mb-1">Welcome to Oulu!</h2>
               <p className="text-oulu-gray mb-2">Today is {formattedDate}</p>
-              <p>How can I help you today?</p>
+              <p>I've found some exciting things happening in Oulu today!</p>
             </div>
           ),
           timestamp: new Date()
@@ -60,20 +56,14 @@ const HomeChat = () => {
         {
           id: '2',
           sender: 'ai',
-          content: quickAccessMessage(),
+          content: eventsMessage(),
           timestamp: new Date(Date.now() + 1000)
         },
         {
           id: '3',
           sender: 'ai',
-          content: eventsMessage(),
-          timestamp: new Date(Date.now() + 2000)
-        },
-        {
-          id: '4',
-          sender: 'ai',
           content: reportsMessage(),
-          timestamp: new Date(Date.now() + 3000)
+          timestamp: new Date(Date.now() + 2000)
         }
       ]);
     }
