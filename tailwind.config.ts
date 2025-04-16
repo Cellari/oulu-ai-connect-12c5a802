@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +20,15 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Custom color palette for Oulu App
+				oulu: {
+					primary: '#0A56A3',     // Deep blue (primary brand color)
+					secondary: '#00AADD',   // Lighter blue
+					accent: '#FF9500',      // Orange accent
+					light: '#F4F9FF',       // Very light blue for backgrounds
+					dark: '#1A365D',        // Dark blue for text
+					gray: '#6B7280'         // Gray for secondary text
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
