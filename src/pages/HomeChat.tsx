@@ -4,7 +4,9 @@ import {
   Calendar, 
   AlertCircle, 
   Navigation,
-  Bot
+  Bot,
+  MapPin,
+  ChevronDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { 
